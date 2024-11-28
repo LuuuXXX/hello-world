@@ -1,8 +1,8 @@
 runners:
-  - &base-job:
-    env: { }
+  - &base-job
+    env: {}
   
-  - &job-linux-4c:
+  - &job-linux-4c
     os: ubunt-20.04
     free_disk: true
     <<: *base-job
