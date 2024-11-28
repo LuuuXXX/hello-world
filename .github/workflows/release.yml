@@ -5,6 +5,10 @@ on:
   pull_request:
     branches: [ "master" ]
 
+concurrency:
+  groups: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   calculate_matrix:
     name: Calculate Job Matrix
