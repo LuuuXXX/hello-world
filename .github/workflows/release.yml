@@ -23,6 +23,9 @@ jobs:
     runs-on: "${{ matrix.os }}"
     env:
       CI_JOB_NAME: ${{ matrix.image }}
+    strategy:
+      matrix:
+        include: ${{ fromJSON(needs.calculate_matrix.output.jobs) }}
     steps:
       - name: checkout the source code
         uses: actions/checkout@v4
