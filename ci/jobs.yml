@@ -11,28 +11,10 @@ runners:
     os: windows-2022-8core-32gb
     <<: *base-job
 
-envs:
-  release:
-    RELEASE: 1
-
 release:
   - image: dist-x86_64-linux
-    env:
-      CODEGEN_BACKENDS: llvm,cranelift
     <<: *job-linux-4c
   - image: dist-aarch64-linux
-    env:
-      CODEGEN_BACKENDS: llvm,cranelift
     <<: *job-linux-4c
   - image: dist-x86_64-msvc
-    env:
-      RUST_CONFIGURE_AGRS: >-
-        --build=x86_64-pc-windows-msvc
-        --host=x86_64-pc-windows-msvc
-        --target=x86_64-pc-windows-msvc
-        --enable-full-tools
-        --enable-profiler
-        --set rust.codegen-units=1
-      SCRIPT: python x.py dist
-      DIST_REQUIRE_ALL_TOOLS: 1
     <<: *job-windows-8c

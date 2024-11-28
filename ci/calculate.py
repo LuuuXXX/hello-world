@@ -13,15 +13,8 @@ def name_jobs(jobs: List[Dict], prefix: str) -> List[Job]:
         job["name"] = f"{prefix} - {job['image']}"
     return jobs
 
-def add_base_env(jobs: List[Job], environment: Dict[str, str]) -> List[Job]:
-    for job in jobs:
-        env = environment.copy()
-        env.update(job.get("env", {}))
-        job["env"] = env
-    return jobs
-
 def calculate_jobs(job_data: Dict[str, Any]) -> List[Job]:
-    return add_base_env(name_jobs(job_data["release"], "Job"), job_data["envs"]["release"])
+    return name_jobs(job_data["release"], "Job")
 
 if __name__ == "__main__":
     with open(JOBS_YAML_PATH) as f:

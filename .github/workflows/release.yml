@@ -20,7 +20,7 @@ jobs:
   job:
     name: ${{ matrix.name }}
     needs: [ calculate_matrix ]
-    runs-on: ${{ matrix.os }}
+    runs-on: "${{ matrix.os }}"
     env:
       CI_JOB_NAME: ${{ matrix.image }}
     steps:
