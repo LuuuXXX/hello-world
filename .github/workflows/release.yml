@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the source code
         uses: actions/checkout@v4
       - name: Calculate the CI Job Matrix
-        run: python3 ci/calculate.py >> $GITHUB_OUTPUT
+        run: python ci/calculate.py >> $GITHUB_OUTPUT
         id: jobs
   job:
     name: ${{ matrix.name }}
