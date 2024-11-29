@@ -2,6 +2,8 @@
 
 set -e
 
+echo "Runing without docker shell"
+
 # windows
 if [ ! -z "$SCRIPT" ]; then
     echo "Execiting ${SCRIPT}"
