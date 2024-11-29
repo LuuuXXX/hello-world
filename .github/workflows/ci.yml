@@ -21,10 +21,12 @@ jobs:
           - name: dist-aarch64-linux
             env:
               IMAGE: dist-aarch64-linux
+              AAAA: 1
             os: ubuntu-20.04
           - name: dist-x86-64-linux
             env:
               IMAGE: dist-x86-64-linux
+              AAAA: 1
             os: ubuntu-20.04
           - name: dist-x86-64-msvc
             env:
