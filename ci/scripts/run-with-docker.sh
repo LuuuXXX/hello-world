@@ -23,6 +23,9 @@ do
 done
 
 docker --version
+pwd
+ls -al
+
 source_dir="$(pwd)"
 docker_dir="ci/docker"
 command=(/bin/bash)
