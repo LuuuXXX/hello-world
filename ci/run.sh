@@ -7,7 +7,7 @@ if [ -n "$CI_JOB_NAME" ]; then
     echo "[CI_JOB_NAME=$CI_JOB_NAME]"
 fi
 
-if [ -z "${IMAGE}" ]; then
+if [ -z "$IMAGE" ]; then
     chmod +x ci/scripts/run-without-docker.sh
     ci/scripts/run-without-docker.sh
 else
