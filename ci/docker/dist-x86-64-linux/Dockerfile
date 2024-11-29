@@ -1,6 +1,6 @@
 From centos:7
 
-ENV PATH=$PATH:$CARGO_HOME/bin
+ENV PATH=$PATH:/cargo/bin
 
 ENV HOSTS=x86_64-unknown-linux-gnu
 
