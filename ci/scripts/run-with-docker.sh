@@ -43,7 +43,7 @@ echo "$source_dir"
 # run ther docker image.
 docker \
   run \
-  --volume $source_dir:/checkout/obj \
+  -v $source_dir:/checkout/obj \
   --init \
   --rm \
   rim-ci \
