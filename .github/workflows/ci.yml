@@ -19,14 +19,20 @@ jobs:
       matrix:
         include:
           - name: dist-aarch64-linux
+            env:
+              IMAGE: dist-aarch64-linux
             os: ubuntu-20.04
           - name: dist-x86-64-linux
+            env:
+              IMAGE: dist-x86-64-linux
             os: ubuntu-20.04
           - name: dist-x86-64-msvc
+            env:
+              SCRIPT: "cargo build --release"
             os: windows-latest
     steps:
       - name: checkout the source code
         uses: actions/checkout@v4
       - name: run build job
-        run: bash ci/run-build.sh
+        run: bash ci/run.sh
         if: success() && !env.SKIP_JOB
