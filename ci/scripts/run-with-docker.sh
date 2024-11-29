@@ -38,7 +38,6 @@ fi
 # run ther docker image.
 docker \
   run \
-  --workdir /checkout/obj \
   --volume $source_dir:/checkout/obj \
   --init \
   --rm \
