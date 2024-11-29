@@ -4,8 +4,6 @@ set -e
 
 # linux
 image=""
-docker_dir="ci/docker"
-
 while [[ $# -gt 0 ]]
 do
   case "$1" in
@@ -25,8 +23,8 @@ do
 done
 
 docker --version
-
 source_dir="$(pwd)"
+docker_dir="$source_dir/ci/docker"
 command=(/bin/bash)
 
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
