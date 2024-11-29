@@ -1,9 +1,9 @@
 name: Test Release
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "dev" ]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -34,4 +34,4 @@ jobs:
       - name: checkout the source code
         uses: actions/checkout@v4
       - name: run build job
-        run: ci/run.sh
+        run: ci/run.sh 2>&1
