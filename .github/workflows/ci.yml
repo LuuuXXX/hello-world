@@ -37,4 +37,4 @@ jobs:
         uses: actions/checkout@v4
       - name: run build job
         run: bash ci/run.sh
-        if: success() && !env.SKIP_JOB
+        
