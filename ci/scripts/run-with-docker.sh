@@ -30,7 +30,7 @@ command=(/bin/bash)
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
     dockerfile="$docker_dir/$image/Dockerfile"
     # build docker image.
-    docker build --rm -t rim-ci -f "$dockerfile"
+    docker buildx build --rm -t rim-ci -f "$dockerfile"
     # run ther docker image.
     docker \
       run \
