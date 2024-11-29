@@ -11,7 +11,7 @@ concurrency:
 
 jobs:
   release:
-    name: "$Job - {{ matrix.name }}"
+    name: "Job - ${{ matrix.name }}"
     runs-on: "${{ matrix.os }}"
     env:
       CI_JOB_NAME: "${{ matrix.name }}"
