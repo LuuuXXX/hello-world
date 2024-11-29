@@ -24,7 +24,7 @@ done
 
 docker --version
 source_dir="$(pwd)"
-docker_dir="$source_dir/ci/docker"
+docker_dir="ci/docker"
 command=(/bin/bash)
 
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
