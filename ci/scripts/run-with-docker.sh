@@ -40,6 +40,8 @@ docker \
   run \
   --workdir /checkout/obj \
   --volume $source_dir:/checkout/obj \
+  --volume $HOME/.cargo:/cargo
+  --env CARGO_HOME=/cargo
   --init \
   --rm \
   rim-ci \
