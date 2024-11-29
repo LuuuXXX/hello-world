@@ -30,14 +30,17 @@ command=(/bin/bash)
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
     dockerfile="$docker_dir/$image/Dockerfile"
     # build docker image.
-    docker buildx build --rm -t rim-ci -f "$dockerfile"
-    # run ther docker image.
-    docker \
-      run \
-      --workdir /checkout/obj \
-      --volume $source_dir:/checkout/obj \
-      --init \
-      --rm \
-      rim-ci \
-      "${command[@]}"
+    docker buildx build --rm -t rim-ci -f "$dockerfile" .
+else
+    echo "Invalid docker image: $image"
 fi
+
+# run ther docker image.
+docker \
+  run \
+  --workdir /checkout/obj \
+  --volume $source_dir:/checkout/obj \
+  --init \
+  --rm \
+  rim-ci \
+  "${command[@]}"
