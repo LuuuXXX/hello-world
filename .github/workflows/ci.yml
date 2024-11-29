@@ -31,4 +31,5 @@ jobs:
       - name: checkout the source code
         uses: actions/checkout@v4
       - name: run build job
-        run: ci/run-build.sh
+        run: bash ci/run-build.sh
+        if: success() && !env.SKIP_JOB
