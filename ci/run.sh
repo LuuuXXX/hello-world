@@ -9,7 +9,7 @@ fi
 
 export
 
-if [ -z "${IMAGE:-}" ]; then
+if [[ "$CI_JOB_NAME" == *windows* ]]; then
     chmod +x ci/scripts/run-without-docker.sh
     ci/scripts/run-without-docker.sh
 else
