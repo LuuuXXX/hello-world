@@ -7,4 +7,4 @@ RUN . /scripts/install-rust.sh
 
 ENV PATH=$PATH:$HOME/.cargo/bin
 
-RUN rustc --version
+RUN export
