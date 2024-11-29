@@ -11,6 +11,7 @@ if [[ "$CI_JOB_NAME" == *windows* ]]; then
     chmod +x ci/scripts/run-without-docker.sh
     ci/scripts/run-without-docker.sh
 else
+    IMAGE=$CI_JOB_NAME
     chmod +x ci/scripts/run-with-docker.sh
-    ci/scripts/run-with-docker.sh "${CI_JOB_NAME}"
+    ci/scripts/run-with-docker.sh "${IMAGE}"
 fi

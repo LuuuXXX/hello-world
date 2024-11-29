@@ -2,10 +2,8 @@
 
 set -e
 
-echo "Runing without docker shell"
-
 # windows
-if [ ! -z "$SCRIPT" ]; then
-    echo "Execiting ${SCRIPT}"
-    sh -x -c "$SCRIPT"  
-fi
+SCRIPT="cargo build --release"
+
+echo "Execiting ${SCRIPT}"
+sh -x -c "$SCRIPT" 

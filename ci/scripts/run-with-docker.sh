@@ -2,8 +2,6 @@
 
 set -e
 
-echo "Runing with docker shell"
-
 # linux
 image=""
 while [[ $# -gt 0 ]]
