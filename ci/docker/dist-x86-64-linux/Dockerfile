@@ -8,6 +8,6 @@ COPY ci/scripts/install-rust.sh /scripts/
 RUN . /scripts/install-rust.sh
 ENV PATH=$PATH:/root/.cargo/bin
 
-RUN export
+RUN pwd && ls
 
-RUN cargo build --release --target=$HOSTS
+# RUN cargo build --release --target=$HOSTS
