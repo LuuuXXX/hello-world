@@ -1,9 +1,9 @@
 name: Test Release
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "luuuxxx-branch" ]
   pull_request:
-    branches: [ "dev" ]
+    branches: [ "luuuxxx-branch" ]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
