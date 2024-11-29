@@ -28,7 +28,7 @@ jobs:
             os: ubuntu-20.04
           - name: dist-x86-64-msvc
             env:
-              SCRIPT: "cargo build --release"
+              SCRIPT: "cargo run --release"
             os: windows-latest
     steps:
       - name: checkout the source code
