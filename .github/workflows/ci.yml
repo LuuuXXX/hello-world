@@ -31,10 +31,10 @@ jobs:
           - name: dist-x86-64-msvc
             env:
               SCRIPT: "cargo run --release"
+              AAAA: 1
             os: windows-latest
     steps:
       - name: checkout the source code
         uses: actions/checkout@v4
       - name: run build job
         run: bash ci/run.sh
-        
