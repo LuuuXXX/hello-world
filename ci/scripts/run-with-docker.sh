@@ -38,8 +38,6 @@ else
     echo "Invalid docker image: $image"
 fi
 
-echo "$source_dir"
-
 # run ther docker image.
 docker \
   run \
