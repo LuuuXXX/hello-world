@@ -7,4 +7,6 @@ RUN . /scripts/install-rust.sh
 
 ENV PATH=$PATH:$HOME/.cargo/bin
 
+RUN export
+
 RUN cargo build --release --host $HOSTS --target $HOSTS
