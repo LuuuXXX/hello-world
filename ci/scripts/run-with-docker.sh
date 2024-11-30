@@ -28,7 +28,8 @@ ls -al
 
 source_dir="$(pwd)"
 docker_dir="ci/docker"
-command=(/bin/bash)
+# command=(/bin/bash)
+command=(pwd)
 
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
     dockerfile="$docker_dir/$image/Dockerfile"
