@@ -3,7 +3,7 @@
 set -e
 
 # windows
-SCRIPT="cargo build --release"
+command="cargo build --release"
 
-echo "Execiting ${SCRIPT}"
-sh -x -c "$SCRIPT" 
+echo "Execiting ${command}"
+sh -x -c "$command" 
