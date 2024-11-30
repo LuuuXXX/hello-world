@@ -28,7 +28,7 @@ ls -al
 
 source_dir="$(pwd)"
 docker_dir="ci/docker"
-command=(cargo build --release)
+command=(cargo build --release --target $TARGET)
 
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
     dockerfile="$docker_dir/$image/Dockerfile"
