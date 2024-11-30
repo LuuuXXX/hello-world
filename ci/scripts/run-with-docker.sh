@@ -28,6 +28,7 @@ ls -al
 
 source_dir="$(pwd)"
 docker_dir="ci/docker"
+command=(cargo build --release)
 
 if [ -f "$docker_dir/$image/Dockerfile" ]; then
     dockerfile="$docker_dir/$image/Dockerfile"
@@ -38,4 +39,4 @@ else
 fi
 
 # run ther docker image.
-docker run --workdir /checkout/obj -v "$source_dir:/checkout/obj" --init --rm rim-ci ls -al /checkout/obj
+docker run --workdir /checkout/obj -v "$source_dir:/checkout/obj" --init --rm rim-ci "${command[@]}"
