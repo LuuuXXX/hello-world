@@ -39,4 +39,4 @@ else
 fi
 
 # run ther docker image.
-docker run --workdir /checkout/obj -v $source_dir:/checkout/obj --init --rm rim-ci "${command[@]}"
+docker run --workdir /checkout/obj -v "$source_dir:/checkout/obj" --init --rm rim-ci "${command[@]}"
