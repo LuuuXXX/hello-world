@@ -19,9 +19,9 @@ jobs:
       matrix:
         include:
           - name: dist-aarch64-linux
-            os: ubuntu-20.04
+            os: ubuntu-24.04-arm
           - name: dist-x86-64-linux
-            os: ubuntu-20.04
+            os: ubuntu-24.04
           - name: dist-x86-64-msvc
             os: windows-latest
     steps:
